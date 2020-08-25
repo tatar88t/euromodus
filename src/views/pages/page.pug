@@ -1,0 +1,119 @@
+include ../helpers/mixins
+#fullpage.fullpage
+	.section.section-main
+		.section-cover
+		.section-content
+			include ../../blocks/components/burger/burger
+			.container
+				include ../../blocks/components/header/header
+				h3 Euromodus
+				h1
+					| Производство мебели
+					br
+					| для отелей
+
+				.section-main-scroll-icon
+
+	.section.section-quadro(data-access = "quadro")
+		include ../../blocks/components/burger/burger
+		include ../../blocks/components/section-type-header/section-type-header
+		+modal("Hotel Quadro", "Качественное решение для гостиниц класса 3*\n" +
+		"В интерьере преобладают теплые и спокойные \n" +
+		"тона, прочная мебель из шпонированного. \n" +
+		"МДФ с элементами из массива бука, выполнена \n" +
+		"по эскизам итальянских дизайнеров.",
+		"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
+		"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
+		"EUR 1.787,00", "EUR 1.430,00", "EUR 10.571,00")
+		.container
+			.sign-look-more.mirror-quadro
+			.sign-look-more.chair-quadro
+			.sign-look-more.table-quadro
+			.sign-look-more.blanket-quadro
+			.sign-look-more.bed-quadro
+			.sign-look-more.nightstand-quadro
+			+section-type-title ("hotel quadro", "10.571")
+	.section.section-futuro(data-access = "futuro")
+		include ../../blocks/components/burger/burger
+		include ../../blocks/components/section-type-header/section-type-header
+		+modal("Hotel Futuro", "Качественное решение для гостиниц класса 5*\n" +
+		"В интерьере преобладают теплые и спокойные \n" +
+		"тона, прочная мебель из шпонированного. \n" +
+		"МДФ с элементами из массива бука, выполнена \n" +
+		"по эскизам итальянских дизайнеров.",
+			"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
+			"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
+			"EUR 1.787,00", "EUR 1.430,00", "EUR 17.300,00")
+		.container
+			.sign-look-more.wardrobe-futuro
+			.sign-look-more.nightstand-futuro
+			.sign-look-more.blanket-futuro
+			.sign-look-more.chair-futuro
+			.sign-look-more.table-futuro
+			.sign-look-more.chair_2-futuro
+			+section-type-title ("hotel futuro", "17.300")
+	.section.section-futuro-1(data-access = "futuro-1")
+		include ../../blocks/components/burger/burger
+		include ../../blocks/components/section-type-header/section-type-header
+		+modal("Hotel Futuro-1", "Качественное решение для гостиниц класса 4*\n" +
+		"В интерьере преобладают теплые и спокойные \n" +
+		"тона, прочная мебель из шпонированного. \n" +
+		"МДФ с элементами из массива бука, выполнена \n" +
+		"по эскизам итальянских дизайнеров.",
+			"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
+			"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
+			"EUR 1.787,00", "EUR 1.430,00", "EUR 14.300,00")
+		.container
+			.sign-look-more.bed-futuro-1
+			.sign-look-more.blanket-futuro-1
+			.sign-look-more.chair-futuro-1
+			.sign-look-more.carpet-futuro-1
+			.sign-look-more.chair_2-futuro-1
+			.sign-look-more.mirror-futuro-1
+			+section-type-title ("hotel futuro1", "14.300")
+	.section.section-quadro-1(data-access = "quadro-1")
+		include ../../blocks/components/burger/burger
+		include ../../blocks/components/section-type-header/section-type-header
+		+modal("Hotel Quadro-1", "Качественное решение для нищебродов\n" +
+		"В интерьере преобладают теплые и спокойные \n" +
+		"тона, прочная мебель из шпонированного. \n" +
+		"МДФ с элементами из массива бука, выполнена \n" +
+		"по эскизам итальянских дизайнеров.",
+			"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
+			"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
+			"EUR 1.787,00", "EUR 1.430,00", "EUR 10.300,00")
+		.container
+			.sign-look-more.chair-quadro-1
+			.sign-look-more.shelf-quadro-1
+			.sign-look-more.carpet-quadro-1
+			.sign-look-more.curtains-quadro-1
+			.sign-look-more.bed-quadro-1
+			.sign-look-more.nightstand-quadro-1
+			+section-type-title ("hotel quadro1", "10.300")
+	.section.section-benefits
+		.section-cover
+		.section-content
+			include ../../blocks/components/burger/burger
+			include ../../blocks/components/section-type-header/section-type-header
+			.container
+				h3 наши преимущества
+				include ../../blocks/components/benefit-features-block/benefit-features-block
+				.catalog
+					h3 каталог
+					.descr
+						p
+							| Мы подготовили для Вас всеобъемлющий каталог товаров: отдельных
+							br
+							| предметов интерьера, а также готовых решений обстановки.
+					+button-slim("скачать")
+
+	.section.section-contacts
+		.section-cover
+		.section-content
+			include ../../blocks/components/burger/burger
+			include ../../blocks/components/section-type-header/section-type-header
+			h3 контакты
+			.section-contacts-content
+				include ../../blocks/components/contacts-block/contacts-block
+				include ../../blocks/components/feedback-block/feedback-block
+			include ../../blocks/components/footer/footer

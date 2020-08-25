@@ -1,0 +1,162 @@
+.feedback-block {
+    box-sizing: border-box;
+    flex-basis: 50%;
+    padding-left: 78px;
+    padding-right: 168px;
+    & h5 {
+        font-size: 18.75px;
+        line-height: 1.2;
+        color: rgb(244, 244, 244);
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        padding-right: 30%;
+    }
+    .feedback-form {
+        display: flex;
+        justify-content: center;
+        form {
+            .input-wrapper {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 92px;
+                & input {
+                    width: 380px;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid rgb(131, 131, 131);
+                    padding-bottom: 20px;
+                    padding-top: 45px;
+                    color: #fff;
+                    &::-webkit-input-placeholder {
+                        font-size: 12.5px;
+                        color: rgb(131, 131, 131);
+                        font-weight: 700;
+                    }
+                    &::-moz-placeholder {
+                        font-size: 12.5px;
+                        color: rgb(131, 131, 131);
+                        font-weight: 700;
+                    }/* Firefox 19+ */
+                    &:-moz-placeholder {
+                        font-size: 12.5px;
+                        color: rgb(131, 131, 131);
+                        font-weight: 700;
+                    }/* Firefox 18- */
+                    &:-ms-input-placeholder {
+                        font-size: 12.5px;
+                        color: rgb(131, 131, 131);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-height: 940px) {
+    .feedback-block {
+        .feedback-form {
+            form {
+                .input-wrapper {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+}
+@media(max-height: 845px) {
+    .feedback-block {
+        .feedback-form {
+            form {
+                .input-wrapper {
+                    margin-bottom: 44px;
+                    & input {
+                        //width: 300px;
+                        padding-bottom: 10px;
+                        padding-top: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-height: 730px) {
+    .feedback-block {
+        .feedback-form {
+            form {
+                .input-wrapper.input-wrapper {
+                    margin-bottom: 24px;
+                    & input {
+                        //width: 300px;
+                        padding-bottom: 6px;
+                        padding-top: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1280px) {
+    .feedback-block {
+        padding-right: 38px;
+        & h5 {
+            font-size: 16px;
+            padding-right: 0;
+        }
+        .feedback-form {
+            form {
+                .input-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 80px;
+                    & input {
+                        width: 300px;
+                        padding-bottom: 10px;
+                        padding-top: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 767px) {
+    .feedback-block {
+        padding-right: 38px;
+        padding-left: 8px;
+        .feedback-form {
+            form {
+                .input-wrapper {
+                    margin-bottom: 60px;
+                    & input {
+                        width: 240px;
+                        padding-bottom: 10px;
+                        padding-top: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 575px) {
+    .feedback-block {
+        min-height: 430px;
+        padding: 0;
+        margin-top: 32px;
+        .feedback-form {
+            form {
+                width: 100%;
+                text-align: center;
+                .input-wrapper {
+
+                    & input {
+                        width: 75%;
+                        margin: 0 auto;
+                        padding-bottom: 10px;
+                        padding-top: 32px;
+                    }
+                }
+            }
+        }
+    }
+}

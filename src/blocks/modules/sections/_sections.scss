@@ -1,0 +1,288 @@
+.fp-tableCell {
+    vertical-align: top;
+}
+.section {
+    position: relative;
+    min-height: 100vh;
+    &-cover {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .82);
+    }
+    &-content {
+        //z-index: 99;
+    }
+}
+.section-main {
+    background: url("../img/main-bg.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+
+
+    & h3, h1 {
+        color: #fff;
+        text-transform: uppercase;
+    }
+    & h3 {
+        font-size: 33px;
+        font-weight: 500;
+        margin-top: 198px;
+    }
+    & h1 {
+        margin-top: 102px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        font-size: 50px;
+    }
+    &-scroll-icon {
+        position: relative;
+        width: 26px;
+        height: 45px;
+        margin: 97px auto 0 auto;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 50%;
+            width: 5px;
+            height: 12px;
+            transform: translateX(-50%);
+            background: #fff;
+            border-radius: 2px;
+        }
+        &:after {
+            content: url("../img/arrow-down-white-icon.png");
+            position: absolute;
+            top: 10px;
+            right: -16px;
+            animation: pulse 1.5s linear infinite;
+        }
+    }
+}
+.section-quadro {
+    background: url("../img/hotel-quadro-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+.section-futuro {
+    background: url("../img/hotel-futuro-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0% 70%;
+}
+.section-futuro-1 {
+    background: url("../img/hotel-futuro-1-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0% 70%;
+}
+.section-quadro-1 {
+    background: url("../img/hotel-quadro-1-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+.section-benefits, .section-contacts {
+    & h3 {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+    }
+}
+.section-benefits {
+    background: url("../img/benefits-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+    z-index: 2;
+    & h3 {
+        margin-top: 68px;
+    }
+    & .catalog {
+        text-align: center;
+        & h3 {
+            margin-top: 63px;
+        }
+        & .descr {
+            color: #fff;
+            margin: 60px auto;
+            & p {
+                font-size: 14.583px;
+                font-variant: small-caps;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+.section-contacts {
+    background: url("../img/contacts-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+    z-index: 2;
+    //padding: 0 100px;
+
+    & h3 {
+        margin-top: 54px;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 72px auto 0 auto;
+        color: #fff;
+    }
+}
+@keyframes pulse {
+
+    25% {
+        transform: translateY(-25%);
+    }
+
+    75% {
+        transform: translateY(25%);
+    }
+}
+@media(max-height: 900px) {
+    .section-benefits {
+        h3 {
+            margin-top: 32px;
+        }
+        .catalog {
+            h3 {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+@media(max-height: 940px) {
+    .section-contacts {
+        &-content {
+            margin-top: 34px;
+        }
+    }
+}
+
+@media(max-height: 800px) {
+    .section-benefits {
+        .catalog {
+            h3 {
+                margin-top: 0;
+            }
+            .descr {
+                margin: 24px auto;
+            }
+        }
+    }
+}
+@media(max-height: 730px) {
+    .section-contacts {
+        h3 {
+            margin-top: 32px;
+            font-size: 34px;
+        }
+    }
+    .section-benefits {
+        h3 {
+            font-size: 34px;
+        }
+        .catalog {
+            h3 {
+                font-size: 34px;
+            }
+            .descr.descr {
+                margin: 14px auto;
+            }
+        }
+    }
+    .section-main {
+        h3 {
+            margin-top: 84px;
+        }
+    }
+}
+@media(max-width: 991px) {
+    .section-benefits {
+        h3 {
+            font-size: 32px;
+        }
+        .catalog {
+            h3 {
+                font-size: 32px;
+            }
+        }
+    }
+    .section-main {
+        & h3 {
+            font-size: 26px;
+            margin-top: 116px;
+        }
+        & h1 {
+            margin-top: 80px;
+            font-size: 42px;
+        }
+    }
+    .section-contacts {
+        h3 {
+            font-size: 32px;
+            margin-top: 38px;
+        }
+        &-content {
+            margin-top: 34px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .section-main {
+        //margin-top: -84px;
+        h1 {
+            font-size: 32px;
+            margin-top: 160px;
+        }
+        h3 {
+            margin-top: 0;
+            transform: translateY(120px);
+        }
+    }
+    .section-contacts {
+
+    }
+}
+@media(max-width: 575px) {
+    .section-contacts {
+
+        h3 {
+            font-size: 26px !important;
+        }
+        min-height: auto;
+        &-content {
+            display: block;
+        }
+    }
+    .section-benefits {
+        padding-bottom: 38px;
+        h3 {
+            font-size: 26px !important;
+        }
+        .catalog {
+            h3 {
+                font-size: 26px !important;
+            }
+            .descr.descr.descr {
+                margin: 36px auto;
+            }
+        }
+    }
+    .section-main {
+        h1 {
+            font-size: 28px;
+        }
+    }
+}

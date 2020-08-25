@@ -1,0 +1,37 @@
+mixin section-type-title (sthtitle, sthprice)
+    .section-type-title
+        .section-type-title-text
+            h2=sthtitle
+            a(href="#").info
+        .section-type-price
+            span &#8364
+            span=sthprice
+mixin button-slim (bslabel)
+    .button-slim
+        button=bslabel
+mixin modal (mtitle, mdescr, mprop_1, mprop_2, mprop_3, mprop_4, mprop_5, mprop_6, mval_1,mval_2,mval_3,mval_4,mval_5,mval_6,mtotal)
+    .modal
+        .modal__dialog
+            .modal__content
+                .modal__close &times;
+                .modal__title=mtitle
+                .caption
+                    .descr=mdescr
+                    .props-block
+                        ul.properties
+                            li=mprop_1
+                            li=mprop_2
+                            li=mprop_3
+                            li=mprop_4
+                            li=mprop_5
+                            li=mprop_6
+                        ul.values
+                            li=mval_1
+                            li=mval_2
+                            li=mval_3
+                            li=mval_4
+                            li=mval_5
+                            li=mval_6
+                .total
+                     span Номер под ключ:
+                     span=mtotal

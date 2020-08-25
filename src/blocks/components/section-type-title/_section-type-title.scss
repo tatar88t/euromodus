@@ -1,0 +1,98 @@
+.section-type-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 218px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+    .section-type-price {
+        margin-top: 46px;
+        & span {
+            display: inline-block;
+            font-size: 42px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+            &:last-child {
+                margin-left: 14px;
+            }
+        }
+    }
+    .section-type-title-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & h2 {
+            font-size: 58px;
+            font-weight: 700;
+            text-transform: uppercase;
+            //margin-left: 66px;
+        }
+        & .info {
+            position: relative;
+            width: 39px;
+            height: 39px;
+            border: 1px solid #000;
+            transition: 0.5s all;
+            background: #000;
+            margin-left: 26px;
+            &:hover {
+                border: 1px solid #000;
+                background: transparent;
+                padding-left: -1px;
+            }
+
+            &:after {
+                content: url("../img/i-white-icon.png");
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 12px;
+                height: 24px;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .section-type-title {
+        margin-top: 122px;
+        .section-type-title-text {
+            h2 {
+                font-size: 48px;
+            }
+        }
+        .section-type-price {
+            margin-top: 32px;
+            & span {
+                font-size: 36px;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .section-type-title {
+
+        .section-type-title-text {
+            display: block;
+            h2 {
+                font-size: 34px;
+            }
+            & .info {
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                margin: 12px auto 0 auto;
+                border: 1px solid #000;
+                background: #000;
+                &:after {
+                    //display: none;
+                }
+            }
+        }
+        .section-type-price {
+            margin-top: 26px;
+            & span {
+                font-size: 26px;
+            }
+        }
+    }
+}

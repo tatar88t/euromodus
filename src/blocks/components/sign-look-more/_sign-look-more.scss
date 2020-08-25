@@ -1,0 +1,164 @@
+.sign-look-more {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.4s all;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        width: 24px;
+        height: 0.5px;
+        background: rgba(255, 255, 255, 0.4);
+        transform: translateY(-50%);
+        transition: 0.4s all;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 50%;
+        width: 0.5px;
+        height: 24px;
+        background: rgba(255, 255, 255, 0.4);
+        transform: translateX(-50%);
+        transition: 0.4s all;
+    }
+    &:hover {
+        border-color: #fff;
+        &:after {
+            background: #fff;
+        }
+        &:before {
+            background: #fff;
+        }
+    }
+}
+.mirror-quadro {
+    position: absolute;
+    top: 33%;
+    left: 16%;
+}
+.chair-quadro {
+    position: absolute;
+    top: 67%;
+    left: 18%;
+}
+.table-quadro {
+    position: absolute;
+    top: 58%;
+    left: 33%;
+}
+.blanket-quadro {
+    position: absolute;
+    top: 80%;
+    left: 60%;
+}
+.bed-quadro {
+    position: absolute;
+    top: 45%;
+    left: 74%;
+}
+.nightstand-quadro {
+    position: absolute;
+    top: 75%;
+    left: 83%;
+}
+.wardrobe-futuro {
+    position: absolute;
+    top: 50%;
+    left: 7.5%;
+}
+.nightstand-futuro {
+    position: absolute;
+    top: 54%;
+    left: 21%;
+}
+.blanket-futuro {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+}
+.chair-futuro {
+    position: absolute;
+    top: 90%;
+    left: 75%;
+}
+.table-futuro {
+    position: absolute;
+    top: 77%;
+    left: 94%;
+}
+.chair_2-futuro {
+    position: absolute;
+    top: 58%;
+    left: 72%;
+}
+.bed-futuro-1 {
+    position: absolute;
+    top: 48%;
+    left: 6%;
+}
+.blanket-futuro-1 {
+    position: absolute;
+    top: 62%;
+    left: 28%;
+}
+.chair-futuro-1 {
+    position: absolute;
+    top: 90%;
+    left: 42%;
+}
+.carpet-futuro-1 {
+    position: absolute;
+    top: 74%;
+    left: 44%;
+}
+.chair_2-futuro-1 {
+    position: absolute;
+    top: 60%;
+    left: 62%;
+}
+.mirror-futuro-1 {
+    position: absolute;
+    top: 28%;
+    left: 70%;
+}
+.chair-quadro-1 {
+    position: absolute;
+    top: 74%;
+    left: 24%;
+}
+.shelf-quadro-1 {
+    position: absolute;
+    top: 48%;
+    left: 26%;
+}
+.carpet-quadro-1 {
+    position: absolute;
+    top: 92%;
+    left: 42%;
+}
+.curtains-quadro-1 {
+    position: absolute;
+    top: 38%;
+    left: 78%;
+}
+.bed-quadro-1 {
+    position: absolute;
+    top: 54%;
+    left: 89%;
+}
+.nightstand-quadro-1 {
+    position: absolute;
+    top: 92%;
+    left: 88%;
+}
+@media(max-width: 991px) {
+    .sign-look-more {
+        display: none;
+    }
+}
