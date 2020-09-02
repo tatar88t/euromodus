@@ -82,11 +82,25 @@
             color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
             margin-top: 54px;
-            & span:last-child {
-                display: inline-block;
+            //background: #e84118;
+            //& span:last-child {
+            //    display: inline-block;
+            //    color: #fff;
+            //    font-weight: 700;
+            //    margin-left: 10px;
+            //}
+            & button {
+                border: none;
+                padding: 8px 16px;
                 color: #fff;
-                font-weight: 700;
-                margin-left: 10px;
+                background: #e84118;
+                text-transform: uppercase;
+                cursor: pointer;
+                outline: none;
+                transition: 0.4s all;
+                &:hover {
+                    background: darken(#e84118, 7%);
+                }
             }
         }
     }

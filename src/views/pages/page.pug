@@ -1,22 +1,24 @@
 include ../helpers/mixins
 #fullpage.fullpage
+
+	include ../../blocks/components/section-type-header/section-type-header
+
 	.section.section-main
 		.section-cover
 		.section-content
-			include ../../blocks/components/burger/burger
-			.container
-				include ../../blocks/components/header/header
-				h3 Euromodus
-				h1
-					| Производство мебели
-					br
-					| для отелей
+			//include ../../blocks/components/burger/burger
+			//.container
+			//	include ../../blocks/components/header/header
 
-				.section-main-scroll-icon
+			h3 Euromodus
+			h1
+				| Производство мебели
+				br
+				| для отелей
 
-	.section.section-quadro(data-access = "quadro")
-		include ../../blocks/components/burger/burger
-		include ../../blocks/components/section-type-header/section-type-header
+			.section-main-scroll-icon
+
+	.section.section-quadro(data-access = "quadro")#quadro
 		+modal("Hotel Quadro", "Качественное решение для гостиниц класса 3*\n" +
 		"В интерьере преобладают теплые и спокойные \n" +
 		"тона, прочная мебель из шпонированного. \n" +
@@ -24,18 +26,23 @@ include ../helpers/mixins
 		"по эскизам итальянских дизайнеров.",
 		"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
 		"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
-		"EUR 1.787,00", "EUR 1.430,00", "EUR 10.571,00")
+		"EUR 1.787,00", "EUR 1.430,00")
+		+calcModal("Стоимость данной композиции будет отправлена на ваш e-mail")
 		.container
 			.sign-look-more.mirror-quadro
+				+signDescr("https://images.unsplash.com/photo-1580152213601-87df3d2c56e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short Description, Mirror")
 			.sign-look-more.chair-quadro
+				+signDescr("https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this Chair")
 			.sign-look-more.table-quadro
+				+signDescr("https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure")
 			.sign-look-more.blanket-quadro
+				+signDescr("https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description of bed")
 			.sign-look-more.bed-quadro
+				+signDescr("https://images.unsplash.com/photo-1578898887932-dce23a595ad4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this bed")
 			.sign-look-more.nightstand-quadro
+				+signDescrLeft("https://images.unsplash.com/photo-1565374235393-6fe32a07cc86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description of nightstand look at this nightstand")
 			+section-type-title ("hotel quadro", "10.571")
 	.section.section-futuro(data-access = "futuro")
-		include ../../blocks/components/burger/burger
-		include ../../blocks/components/section-type-header/section-type-header
 		+modal("Hotel Futuro", "Качественное решение для гостиниц класса 5*\n" +
 		"В интерьере преобладают теплые и спокойные \n" +
 		"тона, прочная мебель из шпонированного. \n" +
@@ -43,18 +50,23 @@ include ../helpers/mixins
 		"по эскизам итальянских дизайнеров.",
 			"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
 			"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
-			"EUR 1.787,00", "EUR 1.430,00", "EUR 17.300,00")
+			"EUR 1.787,00", "EUR 1.430,00")
+		+calcModal("Стоимость данной композиции будет отправлена на ваш e-mail")
 		.container
 			.sign-look-more.wardrobe-futuro
+				+signDescr("https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of wardrobe")
 			.sign-look-more.nightstand-futuro
+				+signDescr("https://images.unsplash.com/photo-1565374235393-6fe32a07cc86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description of nightstand look at this nightstand")
 			.sign-look-more.blanket-futuro
+				+signDescr("https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description of bed")
 			.sign-look-more.chair-futuro
+				+signDescrLeft("https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this Chair")
 			.sign-look-more.table-futuro
+				+signDescrLeft("https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure")
 			.sign-look-more.chair_2-futuro
+				+signDescrLeft("https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this Chair")
 			+section-type-title ("hotel futuro", "17.300")
 	.section.section-futuro-1(data-access = "futuro-1")
-		include ../../blocks/components/burger/burger
-		include ../../blocks/components/section-type-header/section-type-header
 		+modal("Hotel Futuro-1", "Качественное решение для гостиниц класса 4*\n" +
 		"В интерьере преобладают теплые и спокойные \n" +
 		"тона, прочная мебель из шпонированного. \n" +
@@ -62,18 +74,23 @@ include ../helpers/mixins
 		"по эскизам итальянских дизайнеров.",
 			"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
 			"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
-			"EUR 1.787,00", "EUR 1.430,00", "EUR 14.300,00")
+			"EUR 1.787,00", "EUR 1.430,00")
+		+calcModal("Стоимость данной композиции будет отправлена на ваш e-mail")
 		.container
 			.sign-look-more.bed-futuro-1
+				+signDescr("https://images.unsplash.com/photo-1578898887932-dce23a595ad4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this bed")
 			.sign-look-more.blanket-futuro-1
+				+signDescr("https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description of bed")
 			.sign-look-more.chair-futuro-1
+				+signDescrLeft("https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure")
 			.sign-look-more.carpet-futuro-1
+				+signDescrLeft("https://images.unsplash.com/photo-1588499352886-cbf6e4443cb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure")
 			.sign-look-more.chair_2-futuro-1
+				+signDescr("https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this Chair")
 			.sign-look-more.mirror-futuro-1
+				+signDescr("https://images.unsplash.com/photo-1580152213601-87df3d2c56e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short Description, Mirror")
 			+section-type-title ("hotel futuro1", "14.300")
 	.section.section-quadro-1(data-access = "quadro-1")
-		include ../../blocks/components/burger/burger
-		include ../../blocks/components/section-type-header/section-type-header
 		+modal("Hotel Quadro-1", "Качественное решение для нищебродов\n" +
 		"В интерьере преобладают теплые и спокойные \n" +
 		"тона, прочная мебель из шпонированного. \n" +
@@ -81,20 +98,25 @@ include ../helpers/mixins
 		"по эскизам итальянских дизайнеров.",
 			"Площадь номера:", "Текстиль", "Мебель", "Освещение и декор", "Сантехника и аксессуары",
 			"Отделочные материалы", "24 м2", "EUR 1.504,00", "EUR 3.250,00", "EUR 1.300,00",
-			"EUR 1.787,00", "EUR 1.430,00", "EUR 10.300,00")
+			"EUR 1.787,00", "EUR 1.430,00")
+		+calcModal("Стоимость данной композиции будет отправлена на ваш e-mail")
 		.container
 			.sign-look-more.chair-quadro-1
+				+signDescr("https://images.unsplash.com/photo-1578898887932-dce23a595ad4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this bed")
 			.sign-look-more.shelf-quadro-1
+				+signDescr("https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description of bed")
 			.sign-look-more.carpet-quadro-1
+				+signDescr("https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure")
 			.sign-look-more.curtains-quadro-1
+				+signDescrLeft("https://images.unsplash.com/photo-1588499352886-cbf6e4443cb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure")
 			.sign-look-more.bed-quadro-1
+				+signDescrLeft("https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short description look at this Chair")
 			.sign-look-more.nightstand-quadro-1
+				+signDescrLeft("https://images.unsplash.com/photo-1580152213601-87df3d2c56e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", "Short Description, Mirror")
 			+section-type-title ("hotel quadro1", "10.300")
-	.section.section-benefits
+	.section.section-benefits#benefits
 		.section-cover
 		.section-content
-			include ../../blocks/components/burger/burger
-			include ../../blocks/components/section-type-header/section-type-header
 			.container
 				h3 наши преимущества
 				include ../../blocks/components/benefit-features-block/benefit-features-block
@@ -107,11 +129,9 @@ include ../helpers/mixins
 							| предметов интерьера, а также готовых решений обстановки.
 					+button-slim("скачать")
 
-	.section.section-contacts
+	.section.section-contacts#contacts
 		.section-cover
 		.section-content
-			include ../../blocks/components/burger/burger
-			include ../../blocks/components/section-type-header/section-type-header
 			h3 контакты
 			.section-contacts-content
 				include ../../blocks/components/contacts-block/contacts-block

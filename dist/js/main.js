@@ -86,6 +86,46 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/import/calcModal.js":
+/*!************************************!*\
+  !*** ./src/js/import/calcModal.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _validation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./validation */ "./src/js/import/validation.js");
+
+
+function calcModal() {
+  // let trigger = document.querySelectorAll('.total button');
+  // let calcModal = document.querySelector('.calcModal');
+  var modals = document.querySelectorAll('.modal');
+  modals.forEach(function (modal) {
+    var trigger = modal.querySelector('.total button');
+    var calcModal = modal.nextElementSibling;
+    var section = calcModal.parentElement.parentElement;
+    var title = section.querySelector('.section-type-title');
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      calcModal.style.display = 'block';
+      modal.style.display = 'none';
+    });
+    calcModal.addEventListener('click', function (e) {
+      if (e.target.classList.contains('calcModal__close') || e.target === calcModal) {
+        calcModal.style.display = 'none';
+        title.style.display = "block";
+      }
+    });
+  });
+  Object(_validation__WEBPACK_IMPORTED_MODULE_0__["default"])();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (calcModal);
+
+/***/ }),
+
 /***/ "./src/js/import/fullpageInit.js":
 /*!***************************************!*\
   !*** ./src/js/import/fullpageInit.js ***!
@@ -93,90 +133,28 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function mobileInit() {
-  if (window.matchMedia("(max-height: 628px)").matches || window.matchMedia("(max-width: 575px)").matches) {
-    // fullpage_api.destroy();
-    fullpage_api.setResponsive(true);
-  }
-}
-
+// import hideHeader from "./hideHeader";
 function fullPageInit() {
-  var myFullpage = new fullpage('#fullpage', {// afterResize: function(width, height){
-    // fullpage_api.destroy();
-    // let fPage = document.querySelector('#fullpage')
-    // fPage.classList.add('fp-destroyed')
-    // alert('alert')
-    // }
-    //Navigation
-    // menu: '#menu',
-    // lockAnchors: false,
-    // anchors:['firstPage', 'secondPage'],
-    // navigation: false,
-    // navigationPosition: 'right',
-    // navigationTooltips: ['firstSlide', 'secondSlide'],
-    // showActiveTooltip: false,
-    // slidesNavigation: false,
-    // slidesNavPosition: 'bottom',
-    //Scrolling
-    // css3: true,
-    // scrollingSpeed: 700,
-    // autoScrolling: true,
-    // fitToSection: true,
-    // fitToSectionDelay: 1000,
-    // scrollBar: false,
-    // easing: 'easeInOutCubic',
-    // easingcss3: 'ease',
-    // loopBottom: false,
-    // loopTop: false,
-    // loopHorizontal: true,
-    // continuousVertical: false,
-    // continuousHorizontal: false,
-    // scrollHorizontally: false,
-    // interlockedSlides: false,
-    // dragAndMove: false,
-    // offsetSections: false,
-    // resetSliders: false,
-    // fadingEffect: false,
-    // normalScrollElements: '#element1, .element2',
-    // scrollOverflow: false,
-    // scrollOverflowReset: false,
-    // scrollOverflowOptions: null,
-    // touchSensitivity: 15,
-    // bigSectionsDestination: null,
-    //Accessibility
-    // keyboardScrolling: true,
-    // animateAnchor: true,
-    // recordHistory: true,
-    //Design
-    // controlArrows: true,
-    // verticalCentered: true,
-    // sectionsColor : ['#ccc', '#fff'],
-    // paddingTop: '3em',
-    // paddingBottom: '10px',
-    // fixedElements: '#header, .footer',
-    // responsiveWidth: 0,
-    // responsiveHeight: 0,
-    // responsiveSlides: false,
-    // parallax: false,
-    // parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-    // cards: false,
-    // cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
-    //Custom selectors
-    // sectionSelector: '.section',
-    // slideSelector: '.slide',
-    //
-    // lazyLoading: true,
-    //events
-    // onLeave: function(origin, destination, direction){},
-    // afterLoad: function(origin, destination, direction){},
-    // afterRender: function(){},
-    // afterResize: function(width, height){},
-    // afterReBuild: function(){},
-    // afterResponsive: function(isResponsive){},
-    // afterSlideLoad: function(section, origin, destination, direction){},
-    // onSlideLeave: function(section, origin, destination, direction){}
+  var myFullpage = new fullpage('#fullpage', {
+    anchors: ['mainPage', 'quadroPage', 'futuroPage', 'quadroOnePage', 'futuroOnePage', 'benefitsPage', 'contactsPage'],
+    fixedElements: ".section-type-header, .burger",
+    onLeave: function onLeave() {
+      var menu = document.querySelector('.menu');
+      var trigger = document.querySelector('#burger');
+      var header = document.querySelector('.section-type-header');
+      menu.classList.remove('menu_active');
+      trigger.classList.remove('burger_active');
+      header.classList.add('moved');
+    }
   });
-}
+} // function mobileInit () {
+//     if (window.matchMedia("(max-height: 628px)").matches ||
+//         window.matchMedia("(max-width: 575px)").matches) {
+//         fullpage_api.setResponsive(true);
+//
+//     }
+// }
+
 
 window.addEventListener('resize', function () {
   if (window.matchMedia("(max-height: 628px)").matches || window.matchMedia("(max-width: 575px)").matches) {
@@ -186,7 +164,15 @@ window.addEventListener('resize', function () {
     fullpage_api.setResponsive(false);
   }
 });
-mobileInit();
+window.addEventListener('load', function () {
+  if (window.matchMedia("(max-height: 628px)").matches || window.matchMedia("(max-width: 575px)").matches) {
+    // fullpage_api.destroy();
+    fullpage_api.setResponsive(true);
+  } else {
+    fullpage_api.setResponsive(false);
+  }
+}); // mobileInit ()
+
 fullPageInit();
 
 /***/ }),
@@ -267,6 +253,117 @@ var modals = function modals(triggerSelector) {
 
 /***/ }),
 
+/***/ "./src/js/import/showMenu.js":
+/*!***********************************!*\
+  !*** ./src/js/import/showMenu.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function showMenu() {
+  var trigger = document.querySelector('#burger'),
+      close = document.querySelector('.close-menu'),
+      menu = document.querySelector('.menu');
+  trigger.addEventListener('click', function () {
+    menu.classList.toggle('menu_active');
+    trigger.classList.toggle('burger_active');
+  });
+  close.addEventListener('click', function () {
+    menu.classList.remove('menu_active');
+    trigger.classList.remove('burger_active');
+  });
+  window.addEventListener('resize', function () {
+    menu.classList.remove('menu_active');
+    trigger.classList.remove('burger_active');
+  }); // window.addEventListener('scroll', () => {
+  //     menu.classList.remove('menu_active');
+  //     trigger.classList.remove('burger_active')
+  // })
+}
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (showMenu);
+
+/***/ }),
+
+/***/ "./src/js/import/validation.js":
+/*!*************************************!*\
+  !*** ./src/js/import/validation.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function validation() {
+  var inputs = document.querySelectorAll('input[data-rule]');
+  var btn = document.querySelector('.submit');
+
+  var _iterator = _createForOfIteratorHelper(inputs),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var input = _step.value;
+      input.addEventListener('blur', function () {
+        var rule = this.dataset.rule;
+        var value = this.value;
+        var check;
+
+        switch (rule) {
+          case 'number':
+            check = /^\d+$/.test(value);
+            break;
+
+          case 'email':
+            check = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+            break;
+
+          case 'name':
+            check = /[A-zА-яёЁ0-9]{3,30}/.test(value);
+            break;
+
+          case 'shortdescr':
+            check = /[A-zА-яёЁ0-9]{3,50}/.test(value);
+            break;
+
+          case 'text':
+            check = /[A-zА-яёЁ0-9]{6,120}/.test(value);
+            break;
+        }
+
+        this.parentElement.classList.remove('invalid');
+        this.parentElement.classList.remove('valid');
+
+        if (check) {
+          this.parentElement.classList.add('valid');
+        } else {
+          this.parentElement.classList.add('invalid');
+        }
+      });
+    } // if(inputs.every(inp => inp.parentElement.classList.contains('valid'))) {
+    //     console.log('GOOOOOOOOOOOOOOOOOOOOOOD')
+    // }
+
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (validation);
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -279,9 +376,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_fullpageInit_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/fullpageInit.js */ "./src/js/import/fullpageInit.js");
 /* harmony import */ var _import_fullpageInit_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_import_fullpageInit_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _import_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/modal */ "./src/js/import/modal.js");
+/* harmony import */ var _import_showMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/showMenu */ "./src/js/import/showMenu.js");
+/* harmony import */ var _import_validation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./import/validation */ "./src/js/import/validation.js");
+/* harmony import */ var _import_calcModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./import/calcModal */ "./src/js/import/calcModal.js");
 
 
-Object(_import_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('.info'); // alert("borbo");
+
+
+
+Object(_import_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('.info');
+Object(_import_showMenu__WEBPACK_IMPORTED_MODULE_2__["default"])();
+Object(_import_validation__WEBPACK_IMPORTED_MODULE_3__["default"])();
+Object(_import_calcModal__WEBPACK_IMPORTED_MODULE_4__["default"])(); // hideHeader();
+// alert("borbo");
 // $(document).ready(function() {
 //     $('.section-main').addClass('TEST');
 // })

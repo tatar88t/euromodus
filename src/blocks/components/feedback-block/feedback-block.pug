@@ -4,14 +4,15 @@
     .feedback-form
         form
             .input-wrapper
-                input(placeholder="ВАШЕ ИМЯ" type="" name="name")
-
-                input(placeholder="E-MAIL*" type="" name="email")
-
-                input(placeholder="ГОРОД" type="" name="city")
-
-                input(placeholder="НАЗВАНИЕ ОБЪЕКТА" type="" name="object")
-
-                input(placeholder="СООБЩЕНИЕ" type="" name="message")
+                .field
+                    input(placeholder="ВАШЕ ИМЯ" type="" name="name" data-rule="name")
+                .field
+                    input(placeholder="E-MAIL*" type="" name="email" data-rule="email")
+                .field
+                    input(placeholder="ГОРОД" type="" name="city" data-rule="shortdescr")
+                .field
+                    input(placeholder="НАЗВАНИЕ ОБЪЕКТА" type="" name="object" data-rule="shortdescr")
+                .field
+                    input(placeholder="СООБЩЕНИЕ" type="" name="message" data-rule="text")
 
             +button-slim("отправить")

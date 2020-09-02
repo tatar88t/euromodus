@@ -673,11 +673,20 @@ body {
 
 .burger {
   display: block;
-  position: absolute;
+  position: fixed;
+  z-index: 100;
   top: 30px;
   right: 28px;
   width: 38px;
   cursor: pointer;
+}
+
+.burger:hover span {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.burger:hover .moved {
+  opacity: 1;
 }
 
 .burger span {
@@ -759,7 +768,7 @@ body {
 .section-type-title {
   text-align: center;
   color: #fff;
-  margin-top: 218px;
+  margin-top: 302px;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -817,8 +826,17 @@ body {
 }
 
 .section-type-header {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 84px;
   background: rgba(0, 0, 0, 0.7);
+}
+
+.section-type-header-rel {
+  position: relative;
 }
 
 .section-type-content {
@@ -1068,6 +1086,42 @@ body {
   margin-left: 10px;
 }
 
+.valid {
+  position: relative;
+  border: 1px solid green;
+  border-radius: 6px;
+}
+
+.valid:after {
+  content: "\2714";
+  position: absolute;
+  top: 16px;
+  right: -08px;
+  width: 50px;
+  height: 20px;
+  transform: translateY(-50%);
+  color: green;
+  font-size: 20px;
+}
+
+.invalid {
+  position: relative;
+  border: 1px solid red;
+  border-radius: 6px;
+}
+
+.invalid:after {
+  content: "\2718";
+  position: absolute;
+  top: 16px;
+  right: -08px;
+  width: 50px;
+  height: 20px;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 20px;
+}
+
 .feedback-block {
   box-sizing: border-box;
   flex-basis: 50%;
@@ -1096,14 +1150,20 @@ body {
   margin-bottom: 92px;
 }
 
+.feedback-block .feedback-form form .input-wrapper .field {
+  margin-top: 5px;
+}
+
 .feedback-block .feedback-form form .input-wrapper input {
+  display: inline-block;
   width: 380px;
-  background: transparent;
   border: none;
+  background: transparent;
   border-bottom: 1px solid #838383;
   padding-bottom: 20px;
-  padding-top: 45px;
+  margin-top: 40px;
   color: #fff;
+  outline: none;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
@@ -1165,6 +1225,41 @@ body {
   transition: 0.4s all;
 }
 
+.sign-look-more .descr,
+.sign-look-more .descr_left {
+  display: none;
+  position: absolute;
+  bottom: -100%;
+  width: 150px;
+  padding: 14px;
+  transition: 0.5s all;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.sign-look-more .descr img,
+.sign-look-more .descr_left img {
+  width: 100%;
+  height: 100%;
+}
+
+.sign-look-more .descr span,
+.sign-look-more .descr_left span {
+  display: inline-block;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-variant: small-caps;
+}
+
+.sign-look-more .descr {
+  left: 200%;
+}
+
+.sign-look-more .descr_left {
+  right: 200%;
+}
+
 .sign-look-more:hover {
   border-color: #fff;
 }
@@ -1175,6 +1270,14 @@ body {
 
 .sign-look-more:hover:before {
   background: #fff;
+}
+
+.sign-look-more:hover .descr {
+  display: block;
+}
+
+.sign-look-more:hover .descr_left {
+  display: block;
 }
 
 .mirror-quadro {
@@ -1407,11 +1510,19 @@ body {
   margin-top: 54px;
 }
 
-.modal__content .total span:last-child {
-  display: inline-block;
+.modal__content .total button {
+  border: none;
+  padding: 8px 16px;
   color: #fff;
-  font-weight: 700;
-  margin-left: 10px;
+  background: #e84118;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s all;
+}
+
+.modal__content .total button:hover {
+  background: #c83814;
 }
 
 .footer {
@@ -1447,6 +1558,135 @@ body {
   margin-left: 10px;
 }
 
+.menu {
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  z-index: 101;
+  top: -350px;
+  left: 0;
+  width: 100vw;
+  height: 200px;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  transition: 0.5s all;
+}
+
+.menu ul li {
+  font-size: 18px;
+  margin: auto;
+  padding: 10px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menu ul li:last-child {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.4s all;
+}
+
+.menu a:hover {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: underline;
+}
+
+.menu .close-menu {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.menu .close-menu:hover {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.menu_active {
+  top: 0;
+}
+
+.calcModal {
+  display: none;
+  position: absolute;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.calcModal__dialog {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calcModal__content {
+  box-sizing: border-box;
+  position: relative;
+  width: 340px;
+  height: auto;
+  padding: 48px 32px 38px 32px;
+  color: #fff;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.calcModal__content form {
+  width: 90%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+
+.calcModal__content form input {
+  width: 240px;
+  margin: 0 auto;
+  border: none;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+  margin-top: 40px;
+  outline: none;
+}
+
+.calcModal__content form button {
+  margin-top: 38px;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  background: #e84118;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: 0.4s all;
+}
+
+.calcModal__content form button:hover {
+  background: #c83814;
+}
+
+.calcModal__title {
+  text-align: center;
+  color: #000;
+  font-variant: small-caps;
+}
+
+.calcModal__close {
+  font-family: "Times New Roman", sans-serif;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #000;
+}
+
 .fp-tableCell {
   vertical-align: top;
 }
@@ -1474,6 +1714,10 @@ body {
   z-index: 2;
 }
 
+.section-main .section-content {
+  margin-top: 242px;
+}
+
 .section-main h3,
 .section-main h1 {
   color: #fff;
@@ -1483,7 +1727,6 @@ body {
 .section-main h3 {
   font-size: 33px;
   font-weight: 500;
-  margin-top: 198px;
 }
 
 .section-main h1 {
@@ -1553,6 +1796,11 @@ body {
   font-weight: 600;
   color: #fff;
   text-align: center;
+}
+
+.section-benefits .section-content,
+.section-contacts .section-content {
+  margin-top: 150px;
 }
 
 .section-benefits {
@@ -1702,7 +1950,7 @@ body {
   }
 
   .section-type-title {
-    margin-top: 122px;
+    margin-top: 220px;
   }
 
   .section-type-title .section-type-title-text h2 {
@@ -1812,6 +2060,10 @@ body {
     font-size: 42px;
   }
 
+  .section-main .section-content {
+    margin-top: 184px;
+  }
+
   .section-contacts h3 {
     font-size: 32px;
     margin-top: 38px;
@@ -1908,6 +2160,14 @@ body {
   .section-main h3 {
     margin-top: 0;
     transform: translateY(120px);
+  }
+
+  .section-main .section-content {
+    margin-top: 74px;
+  }
+
+  .section-benefits .descr br {
+    display: none;
   }
 }
 
@@ -2036,8 +2296,13 @@ body {
     text-align: center;
   }
 
+  .feedback-block .feedback-form form .input-wrapper .field {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .feedback-block .feedback-form form .input-wrapper input {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 10px;
     padding-top: 32px;

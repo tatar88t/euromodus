@@ -1,8 +1,13 @@
 
 import "./import/fullpageInit.js"
 import modals from "./import/modal"
+import showMenu from "./import/showMenu";
+import hideHeader from "./import/hideHeader";
 
-modals('.info')
+
+modals('.info');
+showMenu();
+// hideHeader();
 // alert("borbo");
 
 // $(document).ready(function() {

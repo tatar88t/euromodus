@@ -1,34 +1,37 @@
 
 <div class="fullpage" id="fullpage">
-  <div class="section section-main">
-    <div class="section-cover"></div>
-    <div class="section-content">
-      <div class="burger" id="burger"><span></span><span></span><span></span></div>
-      <div class="container">
-        <div class="header" id="header">
-          <ul class="header-menu">
-            <li><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500 24 89</a></span></li>
-            <li><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504 41 52</a></span></li>
-            <li><span href="#"><span class="sign">Работаем:</span><span>Пн-Пт</span><span> 10:00-19:00</span></span></li>
-          </ul>
-        </div>
-        <h3>Euromodus</h3>
-        <h1>Производство мебели<br/>для отелей</h1>
-        <div class="section-main-scroll-icon"></div>
+  <div class="section-type-header">
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    <div class="section-type-header-rel"></div>
+    <div class="container">
+      <div class="section-type-content">
+        <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
+        <h4>euromodus</h4>
+        <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li class="menu-item"><a href="#quadroPage">ГОТОВЫЕ РЕШЕНИЯ</a></li>
+          <li class="menu-item"><a href="#benefitsPage">НАШИ ПРЕИМУЩЕСТВА</a></li>
+          <li class="menu-item"><a href="#benefitsPage">КАТАЛОГ</a></li>
+          <li class="menu-item"><a href="#contactsPage">КОНТАКТЫ</a></li>
+        </ul>
+        <div class="close-menu">&#10006;</div>
       </div>
     </div>
   </div>
-  <div class="section section-quadro" data-access="quadro">
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
-    <div class="section-type-header">
-      <div class="container">
-        <div class="section-type-content">
-          <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
-          <h4>euromodus</h4>
-          <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
-        </div>
-      </div>
+  <div class="section section-main">
+    <div class="section-cover"></div>
+    <div class="section-content">
+      <!--include ../../blocks/components/burger/burger-->
+      <!--.container-->
+      <!--	include ../../blocks/components/header/header-->
+      <h3>Euromodus</h3>
+      <h1>Производство мебели<br/>для отелей</h1>
+      <div class="section-main-scroll-icon"></div>
     </div>
+  </div>
+  <div class="section section-quadro" data-access="quadro" id="quadro">
     <div class="modal">
       <div class="modal__dialog">
         <div class="modal__content">
@@ -59,17 +62,51 @@
               </ul>
             </div>
           </div>
-          <div class="total"><span>Номер под ключ:</span><span>EUR 10.571,00</span></div>
+          <div class="total">
+            <button class="btn">рассчитать стоимость</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calcModal">
+      <div class="calcModal__dialog">
+        <div class="calcModal__content">
+          <div class="calcModal__close">&times;</div>
+          <div class="calcModal__title">Стоимость данной композиции будет отправлена на ваш e-mail</div>
+          <form>
+            <div class="field">
+              <input placeholder="ВАШЕ ИМЯ*" type="" name="name" data-rule="name"/>
+            </div>
+            <div class="field">
+              <input placeholder="NUMBER*" type="" name="number" data-rule="number"/>
+            </div>
+            <div class="field">
+              <input placeholder="E-MAIL*" type="" name="email" data-rule="email"/>
+            </div>
+            <button class="submit">узнать стоимость</button>
+          </form>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="sign-look-more mirror-quadro"></div>
-      <div class="sign-look-more chair-quadro"></div>
-      <div class="sign-look-more table-quadro"></div>
-      <div class="sign-look-more blanket-quadro"></div>
-      <div class="sign-look-more bed-quadro"></div>
-      <div class="sign-look-more nightstand-quadro"></div>
+      <div class="sign-look-more mirror-quadro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1580152213601-87df3d2c56e6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short Description, Mirror</span></div>
+      </div>
+      <div class="sign-look-more chair-quadro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this Chair</span></div>
+      </div>
+      <div class="sign-look-more table-quadro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure</span></div>
+      </div>
+      <div class="sign-look-more blanket-quadro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description of bed</span></div>
+      </div>
+      <div class="sign-look-more bed-quadro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1578898887932-dce23a595ad4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this bed</span></div>
+      </div>
+      <div class="sign-look-more nightstand-quadro">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1565374235393-6fe32a07cc86?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description of nightstand look at this nightstand</span></div>
+      </div>
       <div class="section-type-title">
         <div class="section-type-title-text">
           <h2>hotel quadro</h2><a class="info" href="#"></a>
@@ -79,16 +116,6 @@
     </div>
   </div>
   <div class="section section-futuro" data-access="futuro">
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
-    <div class="section-type-header">
-      <div class="container">
-        <div class="section-type-content">
-          <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
-          <h4>euromodus</h4>
-          <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
-        </div>
-      </div>
-    </div>
     <div class="modal">
       <div class="modal__dialog">
         <div class="modal__content">
@@ -119,17 +146,51 @@
               </ul>
             </div>
           </div>
-          <div class="total"><span>Номер под ключ:</span><span>EUR 17.300,00</span></div>
+          <div class="total">
+            <button class="btn">рассчитать стоимость</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calcModal">
+      <div class="calcModal__dialog">
+        <div class="calcModal__content">
+          <div class="calcModal__close">&times;</div>
+          <div class="calcModal__title">Стоимость данной композиции будет отправлена на ваш e-mail</div>
+          <form>
+            <div class="field">
+              <input placeholder="ВАШЕ ИМЯ*" type="" name="name" data-rule="name"/>
+            </div>
+            <div class="field">
+              <input placeholder="NUMBER*" type="" name="number" data-rule="number"/>
+            </div>
+            <div class="field">
+              <input placeholder="E-MAIL*" type="" name="email" data-rule="email"/>
+            </div>
+            <button class="submit">узнать стоимость</button>
+          </form>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="sign-look-more wardrobe-futuro"></div>
-      <div class="sign-look-more nightstand-futuro"></div>
-      <div class="sign-look-more blanket-futuro"></div>
-      <div class="sign-look-more chair-futuro"></div>
-      <div class="sign-look-more table-futuro"></div>
-      <div class="sign-look-more chair_2-futuro"></div>
+      <div class="sign-look-more wardrobe-futuro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of wardrobe</span></div>
+      </div>
+      <div class="sign-look-more nightstand-futuro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1565374235393-6fe32a07cc86?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description of nightstand look at this nightstand</span></div>
+      </div>
+      <div class="sign-look-more blanket-futuro">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description of bed</span></div>
+      </div>
+      <div class="sign-look-more chair-futuro">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this Chair</span></div>
+      </div>
+      <div class="sign-look-more table-futuro">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure</span></div>
+      </div>
+      <div class="sign-look-more chair_2-futuro">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this Chair</span></div>
+      </div>
       <div class="section-type-title">
         <div class="section-type-title-text">
           <h2>hotel futuro</h2><a class="info" href="#"></a>
@@ -139,16 +200,6 @@
     </div>
   </div>
   <div class="section section-futuro-1" data-access="futuro-1">
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
-    <div class="section-type-header">
-      <div class="container">
-        <div class="section-type-content">
-          <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
-          <h4>euromodus</h4>
-          <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
-        </div>
-      </div>
-    </div>
     <div class="modal">
       <div class="modal__dialog">
         <div class="modal__content">
@@ -179,17 +230,51 @@
               </ul>
             </div>
           </div>
-          <div class="total"><span>Номер под ключ:</span><span>EUR 14.300,00</span></div>
+          <div class="total">
+            <button class="btn">рассчитать стоимость</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calcModal">
+      <div class="calcModal__dialog">
+        <div class="calcModal__content">
+          <div class="calcModal__close">&times;</div>
+          <div class="calcModal__title">Стоимость данной композиции будет отправлена на ваш e-mail</div>
+          <form>
+            <div class="field">
+              <input placeholder="ВАШЕ ИМЯ*" type="" name="name" data-rule="name"/>
+            </div>
+            <div class="field">
+              <input placeholder="NUMBER*" type="" name="number" data-rule="number"/>
+            </div>
+            <div class="field">
+              <input placeholder="E-MAIL*" type="" name="email" data-rule="email"/>
+            </div>
+            <button class="submit">узнать стоимость</button>
+          </form>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="sign-look-more bed-futuro-1"></div>
-      <div class="sign-look-more blanket-futuro-1"></div>
-      <div class="sign-look-more chair-futuro-1"></div>
-      <div class="sign-look-more carpet-futuro-1"></div>
-      <div class="sign-look-more chair_2-futuro-1"></div>
-      <div class="sign-look-more mirror-futuro-1"></div>
+      <div class="sign-look-more bed-futuro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1578898887932-dce23a595ad4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this bed</span></div>
+      </div>
+      <div class="sign-look-more blanket-futuro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description of bed</span></div>
+      </div>
+      <div class="sign-look-more chair-futuro-1">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure</span></div>
+      </div>
+      <div class="sign-look-more carpet-futuro-1">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1588499352886-cbf6e4443cb4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure</span></div>
+      </div>
+      <div class="sign-look-more chair_2-futuro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this Chair</span></div>
+      </div>
+      <div class="sign-look-more mirror-futuro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1580152213601-87df3d2c56e6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short Description, Mirror</span></div>
+      </div>
       <div class="section-type-title">
         <div class="section-type-title-text">
           <h2>hotel futuro1</h2><a class="info" href="#"></a>
@@ -199,16 +284,6 @@
     </div>
   </div>
   <div class="section section-quadro-1" data-access="quadro-1">
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
-    <div class="section-type-header">
-      <div class="container">
-        <div class="section-type-content">
-          <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
-          <h4>euromodus</h4>
-          <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
-        </div>
-      </div>
-    </div>
     <div class="modal">
       <div class="modal__dialog">
         <div class="modal__content">
@@ -239,17 +314,51 @@
               </ul>
             </div>
           </div>
-          <div class="total"><span>Номер под ключ:</span><span>EUR 10.300,00</span></div>
+          <div class="total">
+            <button class="btn">рассчитать стоимость</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calcModal">
+      <div class="calcModal__dialog">
+        <div class="calcModal__content">
+          <div class="calcModal__close">&times;</div>
+          <div class="calcModal__title">Стоимость данной композиции будет отправлена на ваш e-mail</div>
+          <form>
+            <div class="field">
+              <input placeholder="ВАШЕ ИМЯ*" type="" name="name" data-rule="name"/>
+            </div>
+            <div class="field">
+              <input placeholder="NUMBER*" type="" name="number" data-rule="number"/>
+            </div>
+            <div class="field">
+              <input placeholder="E-MAIL*" type="" name="email" data-rule="email"/>
+            </div>
+            <button class="submit">узнать стоимость</button>
+          </form>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="sign-look-more chair-quadro-1"></div>
-      <div class="sign-look-more shelf-quadro-1"></div>
-      <div class="sign-look-more carpet-quadro-1"></div>
-      <div class="sign-look-more curtains-quadro-1"></div>
-      <div class="sign-look-more bed-quadro-1"></div>
-      <div class="sign-look-more nightstand-quadro-1"></div>
+      <div class="sign-look-more chair-quadro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1578898887932-dce23a595ad4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this bed</span></div>
+      </div>
+      <div class="sign-look-more shelf-quadro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description of bed</span></div>
+      </div>
+      <div class="sign-look-more carpet-quadro-1">
+        <div class="descr"><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure</span></div>
+      </div>
+      <div class="sign-look-more curtains-quadro-1">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1588499352886-cbf6e4443cb4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Description of table, A table is an arrangement of data in rows and columns, or possibly in a more complex structure</span></div>
+      </div>
+      <div class="sign-look-more bed-quadro-1">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short description look at this Chair</span></div>
+      </div>
+      <div class="sign-look-more nightstand-quadro-1">
+        <div class="descr_left"><img src="https://images.unsplash.com/photo-1580152213601-87df3d2c56e6?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/><span>Short Description, Mirror</span></div>
+      </div>
       <div class="section-type-title">
         <div class="section-type-title-text">
           <h2>hotel quadro1</h2><a class="info" href="#"></a>
@@ -258,19 +367,9 @@
       </div>
     </div>
   </div>
-  <div class="section section-benefits">
+  <div class="section section-benefits" id="benefits">
     <div class="section-cover"></div>
     <div class="section-content">
-      <div class="burger" id="burger"><span></span><span></span><span></span></div>
-      <div class="section-type-header">
-        <div class="container">
-          <div class="section-type-content">
-            <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
-            <h4>euromodus</h4>
-            <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
-          </div>
-        </div>
-      </div>
       <div class="container">
         <h3>наши преимущества</h3>
         <div class="features">
@@ -309,25 +408,15 @@
             <p>Мы подготовили для Вас всеобъемлющий каталог товаров: отдельных<br/>предметов интерьера, а также готовых решений обстановки.</p>
           </div>
           <div class="button-slim">
-            <button>скачать</button>
+            <button class="submit">скачать</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="section section-contacts">
+  <div class="section section-contacts" id="contacts">
     <div class="section-cover"></div>
     <div class="section-content">
-      <div class="burger" id="burger"><span></span><span></span><span></span></div>
-      <div class="section-type-header">
-        <div class="container">
-          <div class="section-type-content">
-            <div class="phones"><span><span class="sign">Телефон:</span><a href="#">+7 (800) 500-24-89</a></span><span><span class="sign">Телефон:</span><a href="#">+7 (499) 504-41-52</a></span></div>
-            <h4>euromodus</h4>
-            <div class="info"><span class="time"><span class="sign">Работаем:</span><span>Пн-Пт<span>10:00-19:00</span></span></span><span class="email"><span class="sign">E-mail:</span><a href="#">ncg.ru.com</a></span></div>
-          </div>
-        </div>
-      </div>
       <h3>контакты</h3>
       <div class="section-contacts-content">
         <div class="contacts-block">
@@ -355,14 +444,24 @@
           <div class="feedback-form">
             <form>
               <div class="input-wrapper">
-                <input placeholder="ВАШЕ ИМЯ" type="" name="name"/>
-                <input placeholder="E-MAIL*" type="" name="email"/>
-                <input placeholder="ГОРОД" type="" name="city"/>
-                <input placeholder="НАЗВАНИЕ ОБЪЕКТА" type="" name="object"/>
-                <input placeholder="СООБЩЕНИЕ" type="" name="message"/>
+                <div class="field">
+                  <input placeholder="ВАШЕ ИМЯ" type="" name="name" data-rule="name"/>
+                </div>
+                <div class="field">
+                  <input placeholder="E-MAIL*" type="" name="email" data-rule="email"/>
+                </div>
+                <div class="field">
+                  <input placeholder="ГОРОД" type="" name="city" data-rule="shortdescr"/>
+                </div>
+                <div class="field">
+                  <input placeholder="НАЗВАНИЕ ОБЪЕКТА" type="" name="object" data-rule="shortdescr"/>
+                </div>
+                <div class="field">
+                  <input placeholder="СООБЩЕНИЕ" type="" name="message" data-rule="text"/>
+                </div>
               </div>
               <div class="button-slim">
-                <button>отправить</button>
+                <button class="submit">отправить</button>
               </div>
             </form>
           </div>
