@@ -68,3 +68,13 @@
         color: #000;
     }
 }
+@media (max-width: 360px) {
+    .calcModal__content {
+        width: 300px;
+        & form {
+            & input {
+                width: 210px;
+            }
+        }
+    }
+}

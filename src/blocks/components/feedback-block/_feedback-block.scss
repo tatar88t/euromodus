@@ -115,14 +115,14 @@
                     & input {
                         //width: 300px;
                         padding-bottom: 10px;
-                        padding-top: 32px;
+                        margin-top: 32px;
                     }
                 }
             }
         }
     }
 }
-@media(max-height: 730px) {
+@media(max-height: 760px) {
     .feedback-block {
         .feedback-form {
             form {
@@ -131,7 +131,7 @@
                     & input {
                         //width: 300px;
                         padding-bottom: 6px;
-                        padding-top: 22px;
+                        margin-top: 22px;
                     }
                 }
             }
@@ -142,6 +142,7 @@
 @media(max-width: 1280px) {
     .feedback-block {
         padding-right: 38px;
+        padding-bottom: 70px;
         & h5 {
             font-size: 16px;
             padding-right: 0;
@@ -155,7 +156,7 @@
                     & input {
                         width: 300px;
                         padding-bottom: 10px;
-                        padding-top: 32px;
+                        margin-top: 32px;
                     }
                 }
             }
@@ -166,14 +167,15 @@
     .feedback-block {
         padding-right: 38px;
         padding-left: 8px;
+        padding-bottom: 70px;
         .feedback-form {
             form {
                 .input-wrapper {
                     margin-bottom: 60px;
                     & input {
                         width: 240px;
-                        padding-bottom: 10px;
-                        padding-top: 32px;
+                        padding-bottom: 6px;
+                        margin-top: 22px;
                     }
                 }
             }
@@ -182,8 +184,9 @@
 }
 @media(max-width: 575px) {
     .feedback-block {
-        min-height: 430px;
+        min-height: auto;
         padding: 0;
+        padding-bottom: 90px;
         margin-top: 32px;
         .feedback-form {
             form {
@@ -199,7 +202,7 @@
                         width: 100%;
                         margin: 0 auto;
                         padding-bottom: 10px;
-                        padding-top: 32px;
+                        margin-top: 32px;
                     }
                 }
             }

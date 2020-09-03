@@ -1,12 +1,17 @@
 
 import "./import/fullpageInit.js"
+
 import modals from "./import/modal"
 import showMenu from "./import/showMenu";
-import hideHeader from "./import/hideHeader";
+import validation from "./import/validation";
+import calcModal from "./import/calcModal";
+
 
 
 modals('.info');
 showMenu();
+validation();
+calcModal();
 // hideHeader();
 // alert("borbo");
 

@@ -1,6 +1,8 @@
 // import hideHeader from "./hideHeader";
 
 
+import glideSlideinit from "./glideSliderInit";
+
 function fullPageInit() {
     var myFullpage = new fullpage('#fullpage', {
         anchors:['mainPage', 'quadroPage', 'futuroPage', 'quadroOnePage', 'futuroOnePage', 'benefitsPage', 'contactsPage'],
@@ -9,12 +11,31 @@ function fullPageInit() {
             let menu = document.querySelector('.menu');
             let trigger = document.querySelector('#burger');
             let header =document.querySelector('.section-type-header');
+            let calcModal = document.querySelectorAll('.calcModal');
+            let modal = document.querySelectorAll('.modal');
+
+
             menu.classList.remove('menu_active');
             trigger.classList.remove('burger_active');
-            header.classList.add('moved')
+            calcModal.forEach(el => {
+                let section = el.parentElement.parentElement;
+                let title = section.querySelector('.section-type-title');
+                el.style.display = 'none'
+                title.style.display = "block"
+            })
+
+            modal.forEach(el => {
+                let section = el.parentElement.parentElement;
+                let title = section.querySelector('.section-type-title');
+                el.style.display = 'none'
+                title.style.display = "block"
+            })
+
 
         },
     });
+    let burger = document.querySelector('.burger')
+    burger.classList.remove('burger_invisible')
 }
 
 // function mobileInit () {
@@ -31,9 +52,14 @@ window.addEventListener('resize', () => {
         window.matchMedia("(max-width: 575px)").matches) {
         // fullpage_api.destroy();
         fullpage_api.setResponsive(true);
+
     }
     else {
         fullpage_api.setResponsive(false);
+    }
+    if (window.matchMedia("(max-height: 628px)").matches ||
+        window.matchMedia("(max-width: 991px)").matches) {
+        glideSlideinit()
     }
 })
 window.addEventListener('load', () => {
@@ -41,10 +67,17 @@ window.addEventListener('load', () => {
         window.matchMedia("(max-width: 575px)").matches) {
         // fullpage_api.destroy();
         fullpage_api.setResponsive(true);
+
     }
     else {
         fullpage_api.setResponsive(false);
     }
+    if (window.matchMedia("(max-height: 628px)").matches ||
+        window.matchMedia("(max-width: 991px)").matches) {
+        glideSlideinit()
+    }
+
+
 })
 // mobileInit ()
 fullPageInit()

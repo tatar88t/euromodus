@@ -5,6 +5,8 @@ import modals from "./import/modal"
 import showMenu from "./import/showMenu";
 import validation from "./import/validation";
 import calcModal from "./import/calcModal";
+import hideHeader from "./import/hideHeader";
+
 
 
 
@@ -12,7 +14,8 @@ modals('.info');
 showMenu();
 validation();
 calcModal();
-// hideHeader();
+hideHeader();
+
 // alert("borbo");
 
 // $(document).ready(function() {

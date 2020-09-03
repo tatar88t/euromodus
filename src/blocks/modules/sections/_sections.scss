@@ -190,8 +190,14 @@
             margin-top: 32px;
             font-size: 34px;
         }
+        .section-content {
+            margin-top: 130px;
+        }
     }
     .section-benefits {
+        .section-content {
+            margin-top: 130px;
+        }
         h3 {
             font-size: 34px;
         }
@@ -281,6 +287,9 @@
         &-content {
             display: block;
         }
+        .section-content.section-content {
+            margin-top: 60px;
+        }
     }
     .section-benefits {
         padding-bottom: 38px;
@@ -294,6 +303,9 @@
             .descr.descr.descr {
                 margin: 36px auto;
             }
+        }
+        .section-content.section-content {
+            margin-top: 60px;
         }
     }
     .section-main {

@@ -25,6 +25,7 @@ const modals = (triggerSelector) => {
                         if (e.target && button.getAttribute("data-access") === modal.getAttribute("data-access") &&
                             button.getAttribute("data-access") === block.getAttribute("data-access")) {
                             e.preventDefault();
+                            e.stopPropagation();
                             modal.style.display = 'block';
                             block.querySelector('.section-type-title').style.display = "none"
                         }

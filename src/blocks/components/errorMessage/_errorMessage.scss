@@ -1,0 +1,13 @@
+.errorMessage {
+    position: absolute;
+    top: -50%;
+    left: 00%;
+    //transform: translateX(-50%);
+}
+
+.errorMessage span {
+    
+    color: #e84118;
+    font-size: 16px;
+    font-variant: small-caps;
+}
