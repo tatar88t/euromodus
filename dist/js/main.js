@@ -136,7 +136,9 @@ function calcModal() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _glideSliderInit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./glideSliderInit */ "./src/js/import/glideSliderInit.js");
+/* harmony import */ var _glidePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./glidePopup */ "./src/js/import/glidePopup.js");
 // import hideHeader from "./hideHeader";
+
 
 
 function fullPageInit() {
@@ -202,6 +204,40 @@ window.addEventListener('load', function () {
 }); // mobileInit ()
 
 fullPageInit();
+
+/***/ }),
+
+/***/ "./src/js/import/glidePopup.js":
+/*!*************************************!*\
+  !*** ./src/js/import/glidePopup.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function glidePopup() {
+  var slides = document.querySelectorAll('.glide__slide img');
+  slides.forEach(function (slide) {
+    return slide.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      var targetImg = e.target.getAttribute("src");
+      var section = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+      var popup = document.createElement('div');
+      popup.classList.add('popup');
+      popup.innerHTML = "\n            <div class = \"popup__dialog\">\n                <div class =\"popup__content\">\n                    <div class=\"popup__close\">&times;</div>\n                    <img src =".concat(targetImg, " />\n                </div>\n            </div>\n        ");
+      e.target && popup.addEventListener('click', function (e) {
+        if (e.target.classList.contains('popup__close') || e.target === popup) {
+          popup.remove();
+        }
+      });
+      section.appendChild(popup);
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (glidePopup);
 
 /***/ }),
 
@@ -963,6 +999,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_validation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./import/validation */ "./src/js/import/validation.js");
 /* harmony import */ var _import_calcModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./import/calcModal */ "./src/js/import/calcModal.js");
 /* harmony import */ var _import_hideHeader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./import/hideHeader */ "./src/js/import/hideHeader.js");
+/* harmony import */ var _import_glidePopup__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./import/glidePopup */ "./src/js/import/glidePopup.js");
+
 
 
 
@@ -973,7 +1011,11 @@ Object(_import_modal__WEBPACK_IMPORTED_MODULE_1__["default"])('.info');
 Object(_import_showMenu__WEBPACK_IMPORTED_MODULE_2__["default"])();
 Object(_import_validation__WEBPACK_IMPORTED_MODULE_3__["default"])();
 Object(_import_calcModal__WEBPACK_IMPORTED_MODULE_4__["default"])();
-Object(_import_hideHeader__WEBPACK_IMPORTED_MODULE_5__["default"])(); // alert("borbo");
+Object(_import_hideHeader__WEBPACK_IMPORTED_MODULE_5__["default"])();
+Object(_import_glidePopup__WEBPACK_IMPORTED_MODULE_6__["default"])();
+window.addEventListener('resize', function () {
+  return Object(_import_glidePopup__WEBPACK_IMPORTED_MODULE_6__["default"])();
+}); // alert("borbo");
 // $(document).ready(function() {
 //     $('.section-main').addClass('TEST');
 // })

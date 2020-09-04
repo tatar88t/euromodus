@@ -6,6 +6,7 @@ import showMenu from "./import/showMenu";
 import validation from "./import/validation";
 import calcModal from "./import/calcModal";
 import hideHeader from "./import/hideHeader";
+import glidePopup from "./import/glidePopup";
 
 
 
@@ -15,7 +16,8 @@ showMenu();
 validation();
 calcModal();
 hideHeader();
-
+glidePopup();
+window.addEventListener('resize', () => glidePopup())
 // alert("borbo");
 
 // $(document).ready(function() {

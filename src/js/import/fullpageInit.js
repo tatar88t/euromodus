@@ -2,6 +2,7 @@
 
 
 import glideSlideinit from "./glideSliderInit";
+import glidePopup from "./glidePopup";
 
 function fullPageInit() {
     var myFullpage = new fullpage('#fullpage', {
@@ -59,7 +60,9 @@ window.addEventListener('resize', () => {
     }
     if (window.matchMedia("(max-height: 628px)").matches ||
         window.matchMedia("(max-width: 991px)").matches) {
-        glideSlideinit()
+
+        glideSlideinit();
+
     }
 })
 window.addEventListener('load', () => {
@@ -74,7 +77,9 @@ window.addEventListener('load', () => {
     }
     if (window.matchMedia("(max-height: 628px)").matches ||
         window.matchMedia("(max-width: 991px)").matches) {
-        glideSlideinit()
+        glideSlideinit();
+
+
     }
 
 
